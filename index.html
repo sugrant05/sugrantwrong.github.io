@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Summer Grant - Portfolio</title>
+</head>
+<link rel="stylesheet" href="css2/styles2.css">
+
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Summer Grant</h1>
+        <p>Web Developer</p>
+    </header>
+
+    <section id="about">
+        <div class="about-box" style="background-color: #e6e6e6;">
+        <h3>About Me</h3>
+        <p> I'm currently a second year, Cognitive Science major, at the University of California, San Diego. 
+        I am currently taking coding courses, taught by amazing professors, to further enhance my skills and experience. 
+        </p>
+       </div>
+        <div class="about-box" style="background-color: #e6e6e6;">
+            <h3>Skills</h3>
+            <p>
+                <li>Web design</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+                <li>Bootstrap</li>
+                <li>Teamwork</li>
+                <li>Strong communication</li>
+            </p>
+        </div>
+        <div class="about-box" style="background-color: #e6e6e6;">
+            <h3>Education</h3>
+            <p>High School: Oceanside High School.</p>
+            <p>(2018-2022)</p>
+            <p>University of California, San Diego - B.S. in Cognitive Science.</p>
+            <p>(2022-2026)</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project 2">
+            <h4>Project 2 - Coding Tables</h4>
+            <p>I created a formatted class scheudle in HTML tables. Added hyperlinks and images throughout the table of schedule. Also added a CSS file to customize my table.</p>
+        </div>
+        <div class="project 3">
+            <h4>Project 3 - Bootstrap - Study Buddy</h4>
+            <p>I was able to use my strong understanding of web standards, which included web markup HTML and CSS. I was able to create a resposibe development from mobile screen to desktop without any issue. </p>
+        </div>
+        <div class="project 7">
+            <h4>Project 7 - Javascript - Wedding Planning</h4>
+            <p>I was able to develop my "pop-up" skills within Javascript. These pop-ups allowed for users to interact with them and created an output that evenly distributed guests to tables.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: hello@reallygreatsite.com</p>
+        <p>Address: 123 Anywhere Street, Any City </p>
+        <p>Phone Number: 123-456-7890</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Summer Grant</p>
+    </footer>
+</body>
+
+<body>
+    <script>
+        const header = document.querySelector('header');
+        const footer = document.querySelector('footer');
+        const nav = document.querySelector('nav');
+        const colors = ['#ade8f4', '#90e0ef', '#48cae4', '#00b4d8', '#0096c7'];
+    
+        let currentIndex = 0;
+    
+        function changeColors() {
+            header.style.transition = 'background-color 1s ease-in-out';
+            footer.style.transition = 'background-color 1s ease-in-out';
+            nav.style.transition = 'background-color 1s ease-in-out';
+    
+            const color = colors[currentIndex];
+            header.style.backgroundColor = color;
+            footer.style.backgroundColor = color;
+            nav.style.backgroundColor = color;
+    
+            currentIndex = (currentIndex + 1) % colors.length;
+        }
+    
+        setInterval(changeColors, 5000);
+    </script>
+</body>
+</html>
